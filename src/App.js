@@ -5,6 +5,11 @@ import * as parkData from './data/skateboard-parks.json';
 
 import './App.css';
 
+const skater = new Icon({
+  iconUrl: '/skateboarding.svg',
+  iconSize: [25, 25],
+});
+
 function App() {
   const [activePark, setActivePark] = React.useState(null);
 
@@ -25,6 +30,7 @@ function App() {
             onclick={() => {
               setActivePark(park);
             }}
+            icon={skater}
           />
         ))}
         {activePark && (
